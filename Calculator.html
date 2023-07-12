@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculator</title>
+</head>
+<style>
+    table tr td{
+        width: 125px; height: 60px;
+    }
+    table{
+        border-spacing: 15px;
+        border-color: white;
+        color: black; text-align: center;
+    }
+</style>
+<body>
+<table>
+    <tr>
+        <td colspan="7" id="">
+            <input id="Result">
+        </td>
+    </tr>
+    <tr>
+        <td style="background-color: #f3eded"><button type="button" onclick="bam('1')" style="width:125px; height: 60px">1</button> </td>
+        <td style="background-color: #f3eded"><button type="button" onclick="bam('2')" style="width:125px; height: 60px">2</button> </td>
+        <td style="background-color: #f3eded"><button type="button" onclick="bam('3')" style="width:125px; height: 60px">3</button> </td>
+        <td style="background-color: #b9c1c9"><button type="button" onclick="bam('&#247')" style="width: 125px;height: 60px">/</button></td>
+    </tr>
+    <tr>
+        <td style="background-color: #f3eded"><button type="button" onclick="bam('4')" style="width: 125px; height: 60px">4</button> </td>
+        <td style="background-color: #f3eded"><button type="button" onclick="bam('5')" style="width: 125px; height: 60px">5</button></td>
+        <td style="background-color: #f3eded"><button type="button" onclick="bam('6')" style="width: 125px; height: 60px">6</button></td>
+        <td style="background-color: #b9c1c9"><button type="button" onclick="bam('&#215')" style="width: 125px; height: 60px">*</button></td>
+    </tr>
+    <tr>
+        <td style="background-color: #f3eded"><button type="button" onclick="bam('7')" style="width: 125px; height: 60px">7</button></td>
+        <td style="background-color: #f3eded"><button type="button" onclick="bam('8')" style="width: 125px; height: 60px">8</button> </td>
+        <td style="background-color: #f3eded"><button type="button" onclick="bam('9')" style="width: 125px; height: 60px">9</button> </td>
+        <td style="background-color: #b9c1c9"><button type="button" onclick="bam('-')" style="width: 125px; height: 60px">-</button> </td>
+    </tr>
+    <tr>
+        <td style="background-color: #f3eded"><button type="button" onclick="bam('0')" style="width: 125px; height: 60px">0</button> </td>
+        <td style="background-color: #f3eded"><button type="button" onclick="bam('.')" style="width: 125px; height: 60px">.</button> </td>
+        <td style="background-color: #b9c1c9"><button type="button" onclick="bam('+')" style="width: 125px;height: 60px">+</button> </td>
+        <td style="background-color: #f3eded"><button type="submit" onclick="bam('Result')" style="width: 125px;height: 60px">Result</button> </td>
+    </tr>
+</table>
+<script>
+    function bam(x){
+        document.getElementById('Result').value +=x;
+    }
+    function clearscreen(){
+        document.getElementById("Result").value="";
+    }
+    function calculate(){
+        let x = document.getElementById("Result").value;
+        let Result = eval(x);
+        document.getElementById("Result").value = Result;
+    }
+</script>
+
+</body>
+</html>
