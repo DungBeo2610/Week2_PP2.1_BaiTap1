@@ -43,21 +43,23 @@
         <td style="background-color: #f3eded"><button type="button" onclick="bam('0')" style="width: 125px; height: 60px">0</button> </td>
         <td style="background-color: #f3eded"><button type="button" onclick="bam('.')" style="width: 125px; height: 60px">.</button> </td>
         <td style="background-color: #b9c1c9"><button type="button" onclick="bam('+')" style="width: 125px;height: 60px">+</button> </td>
-        <td style="background-color: #f3eded"><button type="submit" onclick="bam('Result')" style="width: 125px;height: 60px">Result</button> </td>
+        <td style="background-color: #f3eded"><button type="submit" onclick="click_me()" style="width: 125px;height: 60px">Result</button> </td>
     </tr>
 </table>
+<div>
+    <h2 id="KQ"></h2>
+</div>
 <script>
     function bam(x){
         document.getElementById('Result').value +=x;
     }
-    function clearscreen(){
+    function click_me(){
+        let value = document.getElementById("Result").value;
         document.getElementById("Result").value="";
+        let Result= eval(value);
+        document.getElementById("KQ").innerHTML=Result;
     }
-    function calculate(){
-        let x = document.getElementById("Result").value;
-        let Result = eval(x);
-        document.getElementById("Result").value = Result;
-    }
+
 </script>
 
 </body>
